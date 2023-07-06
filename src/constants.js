@@ -29,6 +29,7 @@ export function generatePrefixes(options) {
     dgis: 'dgis://2gis.ru/',
     liftago: 'lftgpas://',
     petalmaps: 'petalmaps://',
+    sygic: 'com.sygic.aura://',
   };
 }
 
@@ -61,6 +62,7 @@ export function generateTitles(titles) {
     dgis: '2GIS',
     liftago: 'Liftago',
     petalmaps: 'Petal Maps',
+    sygic: 'Sygic',
     ...(titles || {}),
   };
 }
@@ -87,6 +89,7 @@ export const icons = {
   dgis: require('./images/dgis.png'),
   liftago: require('./images/liftago.png'),
   petalmaps: require('./images/petalmaps.png'),
+  sygic: require('./images/sygic.png'),
 };
 
 export const appKeys = Object.keys(icons);

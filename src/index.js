@@ -2,9 +2,9 @@
  * React Native Map Link
  */
 
-import {Linking} from 'react-native';
+import { Linking } from 'react-native';
 
-import {generatePrefixes, generateTitles, isIOS, icons} from './constants';
+import { generatePrefixes, generateTitles, isIOS, icons } from './constants';
 import {
   askAppChoice,
   checkOptions,
@@ -301,6 +301,9 @@ export async function showLocation(options) {
         url += `&saddr=${sourceLat},${sourceLng}`;
       }
       break;
+    case 'sygic':
+      url = `${prefixes.sygic}coordinate|${lng}|${lat}|drive`;
+      break;
   }
 
   if (url) {
@@ -317,7 +320,7 @@ export async function getApps(options) {
 
   const titles = generateTitles(options.appTitles);
   async function open(app) {
-    return showLocation({...options, app});
+    return showLocation({ ...options, app });
   }
 
   let list = [];

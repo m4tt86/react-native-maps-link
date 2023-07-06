@@ -77,6 +77,7 @@ Just add this in your `Info.plist` depending on which apps you'd like to support
     <string>nmap</string>
     <string>dgis</string>
     <string>lftgpas</string>
+    <string>com.sygic.aura</string>
 </array>
 ```
 
@@ -188,6 +189,10 @@ You can do so by coping the `<queries>` statement below, and pasting it in the t
   <intent>
     <action android:name="android.intent.action.VIEW" />
     <data android:scheme="petalmaps" />
+  </intent>
+  <intent>
+    <action android:name="android.intent.action.VIEW" />
+    <data android:scheme="com.sygic.aura" />
   </intent>
 </queries>
 ```
