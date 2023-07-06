@@ -36,7 +36,7 @@ export default class Popup extends React.Component {
     this.state = {
       apps: [],
       loading: true,
-      titles: generateTitles(props.appTitles),
+      titles: generateTitles(props.options.appTitles),
     };
 
     this._renderAppItem = this._renderAppItem.bind(this);
